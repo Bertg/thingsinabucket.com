@@ -1,0 +1,29 @@
+{% assign post = page %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ post.title }} - bertg.be</title>
+    {% include style_and_script.html %}
+  </head>
+  <body>
+    {% include nav.html %}
+    <div class="container container-post">
+      <h1 class="page-header">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small>
+          <time datetime="{{ post.date | date_to_xmlschema }}"></time>
+        </small>
+      </h1>
+      {{ content }}
+    </div>
+
+    {% include post_comments.html %}
+    {% include post_footer.html %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

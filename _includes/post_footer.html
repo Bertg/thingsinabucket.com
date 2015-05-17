@@ -1,0 +1,86 @@
+<footer class="bg-success">
+  <nav class="container">
+    <p class="text-center">
+      <small>
+        You got to the end of this page? Great! Maybe you'd like to read some more?
+      </small>
+    </p>
+    <div  class="row">
+      <div class="col-sm-6">
+
+        {% if post.previous %}
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Previous: <a href="{{ post.previous.url }}">
+                {{ post.previous.title}}
+              </a>
+            </div>
+            <div class="panel-body">
+              {{post.previous.excerpt}}
+              <a href="{{ post.previous.url }}">
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        {% else %}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              The last page
+            </div>
+            <div class="panel-body">
+              It appears this was the last page on the site! Wow.
+              Well I guess I could link the <a href="404.html">404 page</a> here.
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+
+      <div class="col-sm-6">
+
+        {% if post.next %}
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Next: <a href="{{ post.next.url }}">
+                {{ post.next.title}}
+              </a>
+            </div>
+            <div class="panel-body">
+              {{post.next.excerpt}}
+              <a href="{{ post.next.url }}">
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+        {% else %}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              The first page
+            </div>
+            <div class="panel-body">
+              Actually, this is the most recent article. Want more?
+              <a href="https://twitter.com/intent/tweet?screen_name=bertgoethals">Let me know</a>
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </nav>
+  <hr />
+  <div class="text-center">
+    <div id="copyright">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+      </a>
+      <br />
+      This work is licensed under a
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+
+<div class="container container-post">
+  <h1 class="page-header">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <small>
+      <time datetime="{{ post.date | date_to_xmlschema }}"></time>
+    </small>
+  </h1>
+  {{ post.content }}
+</div>
+
+{% include post_comments.html %}
+{% include post_footer.html %}
+
+{% endfor %}
