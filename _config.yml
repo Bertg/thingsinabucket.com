@@ -7,10 +7,12 @@ defaults:
       stylesheet: "//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css"
       javascript: "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
 
+# Configuration
 permalink: /:year/:month/:day/:title
 paginate: 1
 timezone: UTC
 domain: thingsinabucket.com
+highlighter: pygments
 
 # For RSS
 name: thingsinabucket.com
