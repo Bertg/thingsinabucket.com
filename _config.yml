@@ -16,3 +16,7 @@ domain: thingsinabucket.com
 name: thingsinabucket.com
 description: A blog mostly about programming, mostly in ruby
 url: http://thingsinabucket.com
+
+# Activate emoji
+gems:
+  - jemoji
