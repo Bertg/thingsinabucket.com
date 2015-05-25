@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ post.title }} - bertg.be</title>
-    {% include style_and_script.html %}
+    {% include style_and_script_head.html %}
   </head>
   <body>
     {% include nav.html %}
@@ -23,7 +23,6 @@
     {% include post_comments.html %}
     {% include post_footer.html %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    {% include style_and_script_bodyend.html %}
   </body>
 </html>
