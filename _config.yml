@@ -18,6 +18,7 @@ highlighter: pygments
 name: thingsinabucket.com
 description: A blog mostly about programming, mostly in ruby
 url: http://thingsinabucket.com
+feedburner_url: http://feeds.feedburner.com/thingsinabucket
 
 # Activate emoji
 gems:
