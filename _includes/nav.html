@@ -1,7 +1,7 @@
 <style>
-  .navbar-brand .glyphicon.cat-active {
+  /*.navbar-brand .glyphicon.cat-active {
     color: red;
-  }
+  }*/
 </style>
 
 <nav class="navbar navbar-default navbar-static-top">
@@ -14,13 +14,13 @@
         {% assign education_active_class = '' %}
         {% assign comment_active_class = '' %}
 
-        {% if page.categories contains 'code' %}
+        {% if post.categories contains 'code' %}
           {% assign console_active_class = 'cat-active' %}
         {% endif %}
-        {% if page.categories contains 'learning' %}
+        {% if post.categories contains 'learning' %}
           {% assign education_active_class = 'cat-active' %}
         {% endif %}
-        {% if page.categories contains 'comment' %}
+        {% if post.categories contains 'comment' %}
           {% assign comment_active_class = 'cat-active' %}
         {% endif %}
 
