@@ -28,6 +28,8 @@ end
 
 That looks a lot better already! 🎉
 
+Ruby will evaluate the code in the block when a key is missing. This makes it great tool for these types of lookups, or as a quick in memory cache.
+
 In [last weeks post](/2015/05/20/pocs_and_brackets) we saw that we can call procs using brackets. When those operations become expensive, we can just wrap it with a Hash without changing our client code.
 
 {% highlight ruby %}
