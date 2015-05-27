@@ -65,13 +65,13 @@ paginated_lookup = ->(index) do
   }
 end
 
-pagianted_lookup_cache = Hash.new do |hash, key|
+paginated_lookup_cache = Hash.new do |hash, key|
   hash.merge! paginated_lookup[key]
   hash[key]
 end
 
-pagianted_lookup_cache[10] => "index[10]"
-pagianted_lookup_cache[11] => "index[10].next"
+paginated_lookup_cache[10] => "index[10]"
+paginated_lookup_cache[11] => "index[10].next"
 {% endhighlight %}
 
 We can populate the Hash based on the previous calls. Sweet! 🎂
@@ -85,7 +85,7 @@ times2 = Hash.new {|_,v| v*2 } # => {}
 times2.fetch(1) # KeyError: key not found: 1
 {% endhighlight %}
 
-Please don't use this "work-arround" either.
+Please don't use this "workaround" either.
 
 {% highlight ruby %}
 times2.fetch(1) { |k| times2[k] }
