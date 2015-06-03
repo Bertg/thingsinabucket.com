@@ -20,6 +20,9 @@ description: A blog mostly about programming, mostly in ruby
 url: http://thingsinabucket.com
 feedburner_url: http://feeds.feedburner.com/thingsinabucket
 
+# Social
+twitter_url: https://twitter.com/thingsinabucket
+
 # Activate emoji
 gems:
   - jemoji
