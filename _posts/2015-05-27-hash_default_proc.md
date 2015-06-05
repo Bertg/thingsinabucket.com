@@ -39,8 +39,8 @@ expensive_proc = ->(v) do
   [v] * 2
 end
 
-expensive_proc_with_cache = Hash.new do |hash, value|
-  hash[value] = expensive_proc[value]
+expensive_proc_with_cache = Hash.new do |hash, key|
+  hash[key] = expensive_proc[key]
 end
 
 def repeat_10_times(proc)
